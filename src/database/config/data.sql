@@ -27,4 +27,29 @@ CREATE TABLE comment (
     content VARCHAR(255) NOT NULL
 );
 
+-- for test
+insert
+    into users(username, first_name, last_name, email, password)
+values
+    (
+        'tareq_hisham',
+        'tareq',
+        'hisham',
+        'tareq@gmail.com',
+        '123456789'
+    ),
+    (
+        'naser_wael',
+        'naser',
+        'wael',
+        'naser@gmail.com',
+        '0123456789'
+    );
+
+insert
+    into post(title, content)
+values
+    ('Sports', 'Cr7 G.O.A.T !!!!!!!!!!!'),
+    ('Social Media', 'Twitter Facebook !!!!!!!!!!');
+
 COMMIT;
