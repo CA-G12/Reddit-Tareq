@@ -28,8 +28,8 @@ CREATE TABLE comment (
 );
 
 -- for test
-insert
-    into users(username, first_name, last_name, email, password)
+insert into
+    users(username, first_name, last_name, email, password)
 values
     (
         'tareq_hisham',
@@ -46,8 +46,8 @@ values
         '0123456789'
     );
 
-insert
-    into post(title, content)
+insert into
+    post(title, content)
 values
     ('Sports', 'Cr7 G.O.A.T !!!!!!!!!!!'),
     ('Social Media', 'Twitter Facebook !!!!!!!!!!');
