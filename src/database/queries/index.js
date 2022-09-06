@@ -1,5 +1,7 @@
 const { getUserInfo, getUserName } = require('./login');
-const { addPost, deletePost } = require('./posts');
+const {
+  addPost, deletePost, getPost, getAllPosts,
+} = require('./posts');
 const { getUserByEmail, insertNewUser } = require('./signup');
 
 module.exports = {
@@ -9,5 +11,6 @@ module.exports = {
   deletePost,
   getUserByEmail,
   insertNewUser,
-
+  getPost,
+  getAllPosts,
 };
