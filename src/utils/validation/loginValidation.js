@@ -1,6 +1,6 @@
 const Joi = require('joi');
 
-module.exports = Joi.object({
+const loginSchema = Joi.object({
   email: Joi.string().email().required(),
   passowrd: Joi.string()
     .regex(
@@ -8,3 +8,5 @@ module.exports = Joi.object({
     )
     .required(),
 });
+
+module.exports = loginSchema;
