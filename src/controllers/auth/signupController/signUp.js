@@ -9,7 +9,7 @@ const signup = async (req, res, next) => {
       { abortEarly: false },
     );
     const checkEmail = await getUserByEmail(email);
-    if (checkEmail) {
+    if (checkEmail.rows.length) {
       return res.status(401).json({
         status: 'error',
         message: 'User already exist',

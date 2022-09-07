@@ -5,7 +5,6 @@ const {
   addThePost, deleteThePost, getAllThePosts, getThePost,
 } = require('../controllers');
 
-// console.log(getThePost);
 postRouter.post('/', checkSignin, addThePost);
 postRouter.get('/', getAllThePosts);
 postRouter.get('/:id', getThePost);

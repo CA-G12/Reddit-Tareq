@@ -5,7 +5,6 @@ const { NODE_ENV, DB_URL } = process.env;
 
 let connectionString = '';
 let ssl = false;
-console.log(NODE_ENV);
 switch (NODE_ENV) {
   case 'production':
     connectionString = DB_URL;
