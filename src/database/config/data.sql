@@ -7,8 +7,8 @@ comment CASCADE;
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username VARCHAR(255) NOT NULL,
-    first_name VARCHAR(255) NOT NULL,
-    last_name VARCHAR(255) NOT NULL,
+    -- first_name VARCHAR(255) NOT NULL,
+    -- last_name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL
 );
@@ -27,21 +27,17 @@ CREATE TABLE comment (
     content VARCHAR(255) NOT NULL
 );
 
--- for test
+-- for test default value
 insert into
-    users(username, first_name, last_name, email, password)
+    users(username, email, password)
 values
     (
         'tareq_hisham',
-        'tareq',
-        'hisham',
         'tareq@gmail.com',
-        '123456789'
+        'tareq123456789'
     ),
     (
         'naser_wael',
-        'naser',
-        'wael',
         'naser@gmail.com',
         '0123456789'
     );
