@@ -1,7 +1,7 @@
-const gerUserInfo = require('./getUserInfo');
+const getUserInfo = require('./getUserInfo');
 const getUserName = require('./getUserName');
 
 module.exports = {
-  gerUserInfo,
+  getUserInfo,
   getUserName,
 };
