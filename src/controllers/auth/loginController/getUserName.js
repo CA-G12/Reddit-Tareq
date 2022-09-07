@@ -10,4 +10,4 @@ const getTheUserName = async (req, res) => {
   }
 };
 
-module.exports = getTheUserName;
+module.exports = {getTheUserName};

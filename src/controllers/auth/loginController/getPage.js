@@ -6,4 +6,4 @@ const getLoginPage = (req, res) => {
   );
 };
 
-module.exports = getLoginPage;
+module.exports = { getLoginPage };
