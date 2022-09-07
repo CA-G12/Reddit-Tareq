@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const clearCookie = require('../middlewares/clearCookie');
-const logout = require('../controllers');
+// const clearCookie = require('../middlewares/clearCookie');
+const { logout } = require('../controllers');
 
-router.get('/logout', clearCookie, logout);
+router.post('/logout', logout);
 
 module.exports = router;

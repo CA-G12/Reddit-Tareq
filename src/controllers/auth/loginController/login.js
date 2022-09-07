@@ -10,14 +10,13 @@ const login = async (req, res, next) => {
       { abortEarly: false },
     );
     const user = await getUserInfo(email);
-    if (!user) {
+    if (!user.rows.length) {
       return res.status(401).json({
         status: 'error',
         message: 'User does not already exists',
       });
     }
-
-    const checkUser = await comparePassword(password, user.password);
+    const checkUser = await comparePassword(password, user.rows[0].password);
     if (!checkUser) {
       return res.status(401).json({
         status: 'error',
@@ -25,7 +24,7 @@ const login = async (req, res, next) => {
       });
     }
 
-    req.id = user.id;
+    req.id = user.rows[0].id;
     next();
   } catch (err) {
     if (err.details) {
@@ -36,4 +35,4 @@ const login = async (req, res, next) => {
   }
 };
 
-module.exports = {login};
+module.exports = { login };
