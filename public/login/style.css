@@ -1,12 +1,55 @@
 body {
     background-color: #F3EBF6;
     font-family: 'Ubuntu', sans-serif;
+    padding: 0;
+    margin: 0;
 }
+/* ------------------------------- Start About Navbar ------------------------------- */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background: #f4f4f4;
+    height: 55px;
+
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo .reddit-logo {
+    height: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+.logo p {
+    font-size: 30px;
+    color: rgb(255 0 0);
+}
+.signSection {
+    display: flex;
+    align-items: center;
+}
+
+.signSection a {
+    text-decoration: none;
+    color: #bb0000;
+    border: 2px solid rgb(255 83 0);
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 0px 10px;
+}
+    /* ------------------------------- End About Navbar ------------------------------- */
 .main {
     background-color: #FFFFFF;
     width: 400px;
     height: 400px;
-    margin: 7em auto;
+    margin: 5em auto;
     border-radius: 1.5em;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
 }

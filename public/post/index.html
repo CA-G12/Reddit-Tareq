@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./home/style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="https://www.iconpacks.net/icons/2/free-reddit-logo-icon-2436-thumb.png" type="image/icon type">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Reddit</title>
@@ -13,24 +13,22 @@
     <!-- ------------------------------- Start About Navbar ------------------------------- -->
     <nav>
         <a href="/" class="logo">
-            <img src="./assets/reddit-logo.png" alt="reddit-logo" class="reddit-logo">
+            <img src="../assets/reddit-logo.png" alt="reddit-logo" class="reddit-logo">
             <p>Reddit</p>
         </a>
         <div class="signSection">
-            <a href="/login">Login</a>
-            <a href="/signup">Signup</a>
             <a href="/">Logout</a>
         </div>
     </nav>
     <!-- ------------------------------- End About Navbar ------------------------------- -->
     
     <!-- ------------------------------- Start About Main ------------------------------- -->
+    
+    <!-- ------------------------------- Start About posts ------------------------------- -->
     <main>
         <div class="main">
-                <!-- ------------------------------- Start About posts ------------------------------- -->
-                
-                <section class="posts">
-                    <div class="onePost">
+            <section class="posts">
+                <div class="onePost">
                     <div class="username">
                         <p>Posted By : Tareq</p>
                     </div>
@@ -46,29 +44,15 @@
                         <div class="suggestion"> 
                             <div class="btns"> 
                                 <a>Delete Post <i class="fa-solid fa-trash"></i></a>
-                                <a href="/posts/:id">Show Post <i class="fa-solid fa-hand-pointer"></i></a>
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </section>
             <!-- ------------------------------- End About posts ------------------------------- -->
-            
-            <!-- ------------------------------- Start About Add Post ------------------------------- -->
-            <section class="addPost">
-            <form>
-                <label for="title">Title</label>
-                <input type="text" name="title" id="title" placeholder="Write The title :">
 
-                <label for="content">Content</label>
-                <textarea name="content" id="content" cols="30" rows="10" placeholder="Write What in Your mind :"></textarea>
-
-                <button>Add Post</button>
-            </form>
-        </section>
-        <!-- ------------------------------- End About Add Post ------------------------------- -->
-    </div>
+        </div>
     </main>
     <!-- ------------------------------- End About Main ------------------------------- -->
     <script src="./home/index.js"></script>
