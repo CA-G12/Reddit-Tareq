@@ -12,8 +12,6 @@ nav {
     padding: 10px 40px;
     background: #f4f4f4;
     height: 55px;
-
-
 }
 
 .logo {
@@ -101,35 +99,4 @@ nav {
         
     }
     /* ------------------------------- End About  Posts ------------------------------- */
-    
-    /* ------------------------------- Start About Add Post ------------------------------- */
-    .addPost form {
-        display: flex;
-        flex-direction: column;
-        border: 2px solid #000;
-        background: #fff;
-        padding: 10px 15px;
-    }
-    .addPost form label {
-        font-size: 20px;
-    }
-    .addPost form input  , .addPost form textarea {
-        background-color: rgb(211, 210, 210);
-        border: none;
-        padding: 10px;
-        margin: 10px 0px;
-        outline: none;
-        border-radius: 3px;
-
-    }
-    .addPost form button {
-        padding: 10px 5px;
-        cursor: pointer;
-        border-radius: 10px;
-        border: none;
-        background: #ff905a;
-        margin-bottom: 10px;
-    }
-    /* ------------------------------- End About Add Post ------------------------------- */
-    
     /* ------------------------------- End About Main ------------------------------- */
