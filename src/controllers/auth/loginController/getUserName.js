@@ -1,7 +1,7 @@
 const { getUserName } = require('../../../database/queries');
 
 const getTheUserName = async (req, res) => {
-  const { id } = req.body;
+  const { id } = req;
   try {
     const data = await getUserName(id);
     res.json(data.rows);
@@ -10,4 +10,4 @@ const getTheUserName = async (req, res) => {
   }
 };
 
-module.exports = {getTheUserName};
+module.exports = { getTheUserName };
