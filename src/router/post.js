@@ -7,7 +7,7 @@ const {
 
 postRouter.post('/', checkSignin, addThePost);
 postRouter.get('/', getAllThePosts);
-postRouter.get('/:id', getThePost);
+postRouter.get('/:id', checkSignin, getThePost);
 postRouter.delete('/:id', checkSignin, deleteThePost);
 
 module.exports = postRouter;
