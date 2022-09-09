@@ -32,7 +32,8 @@
     "node-fetch": "^2.6.7",
     "nodemon": "^2.0.19",
     "pg": "^8.8.0",
-    "supertest": "^6.2.4"
+    "supertest": "^6.2.4",
+    "sweetalert": "^2.1.2"
   },
   "devDependencies": {
     "eslint": "^8.23.0",

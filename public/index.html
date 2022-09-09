@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./home/style.css">
     <link rel="icon" href="https://www.iconpacks.net/icons/2/free-reddit-logo-icon-2436-thumb.png" type="image/icon type">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="../node_modules/sweetalert/dist/sweetalert.min.js"> -->
     <title>Reddit</title>
 </head>
 <body>
@@ -17,9 +19,10 @@
             <p>Reddit</p>
         </a>
         <div class="signSection">
-            <a href="/login">Login</a>
-            <a href="/signup">Signup</a>
-            <a href="/">Logout</a>
+            <a class="loginBtn" href="/login">Login</a>
+            <a class="signupBtn" href="/signup">Signup</a>
+            <a class="logoutBtn" href="/">Logout</a>
+            <p class="username">User Name</p>
         </div>
     </nav>
     <!-- ------------------------------- End About Navbar ------------------------------- -->
@@ -40,14 +43,15 @@
 
                 <label for="content">Content</label>
                 <textarea name="content" id="content" cols="30" rows="10" placeholder="Write What in Your mind :"></textarea>
-
-                <button>Add Post</button>
+                <div class="error-addPost"></div>
+                <button class="addButton">Add Post</button>
             </form>
         </section>
         <!-- ------------------------------- End About Add Post ------------------------------- -->
     </div>
     </main>
     <!-- ------------------------------- End About Main ------------------------------- -->
+    <!-- <script src="../node_modules/sweetalert/dist/sweetalert.min.js"></script> -->
     <script src="./home/index.js"></script>
 </body>
 </html>
