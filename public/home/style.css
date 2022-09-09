@@ -36,6 +36,12 @@ nav {
     display: flex;
     align-items: center;
 }
+.signSection .username {
+    color: rgb(255 67 0);
+    display: flex;
+    font-family: cursive;
+    font-size: 23px;
+}
 
 .signSection a {
     text-decoration: none;
@@ -59,14 +65,16 @@ nav {
     .posts .onePost {
         width: 800px;
         border: 2px solid #000;
-        margin: 40px 5px;
+        margin-bottom: 40px;
 
     }
     .username {
         font-weight: 600;
-        padding: 30px 20px 0px;
-
     }
+    .onePost .username {
+        padding: 30px 20px 0px;
+    }
+
 
     .title {
         margin: 20px 0px;
@@ -77,11 +85,16 @@ nav {
 
     .title p {
         text-decoration: underline;
+        overflow: hidden;
     }
     .content p {
         font-size: 18px;
         padding: 5px 20px;
-
+        overflow: hidden;
+    }
+    .error-addPost {
+        color: red;
+        text-align: center;
     }
     .btns {
         background: #dadada;
