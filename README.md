@@ -2,13 +2,13 @@
 
 <br />
 <div >
-    <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx5egCYP21yf3vW5Z29maAQHcO6Xah5BgWqZq_DPVQyw&s" style ="height: 120px; width: 120px; border-radius:50%;">
+    <img src ="./public/assets/reddit-logo.png" style ="height: 120px; width: 120px;">
 
 </div>
 
 ## **Live Website**
 
-You can check out our website here [**Apple**](https://reddit-tareq.herokuapp.com/).
+You can check out our website here [**REDDIT**](https://reddit-tareq.herokuapp.com/).
 
 ## **About My Website**
 
