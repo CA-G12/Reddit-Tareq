@@ -2,12 +2,8 @@
 
 <br />
 <div >
-    <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx5egCYP21yf3vW5Z29maAQHcO6Xah5BgWqZq_DPVQyw&s" style ="height: 80px; width: 80px;">
+    <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx5egCYP21yf3vW5Z29maAQHcO6Xah5BgWqZq_DPVQyw&s" style ="height: 120px; width: 120px; border-radius:50%;">
 
-<div >
-    <h1> Reddit
-    </h1>
-</div>
 </div>
 
 ## **Live Website**
@@ -55,4 +51,4 @@ and he can deleted the post by clicking on delete post and show it in new page b
 
 # DB Schema
 
-![screen1](https://drawsql.app/teams/tareq-g12/diagrams/reddit-database)
+![SCHEMA](./public/assets/schema.png)
