@@ -2,7 +2,7 @@ const { getPost } = require('../../database/queries');
 
 const getThePost = (req, res) => {
   const { id } = req.params;
-  const userId = req.id;
+  const userId = req.id; 
   getPost(id)
     .then((data) => {
       if (data.rows.length) {

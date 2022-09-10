@@ -1,0 +1,26 @@
+
+body {
+    background-color: salmon;
+    text-align: center;
+}
+img {
+    width: 400px;
+    height: 300px;
+}
+.goBack {
+    font-size: 25px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: none;
+    background: #ff4949;
+    color: #fff;
+    box-shadow: 0px 0px 9px 0px #979797;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#text {
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+}

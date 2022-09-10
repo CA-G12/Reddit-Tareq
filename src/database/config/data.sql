@@ -7,8 +7,6 @@ comment CASCADE;
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username VARCHAR(255) NOT NULL,
-    -- first_name VARCHAR(255) NOT NULL,
-    -- last_name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL
 );
@@ -27,25 +25,5 @@ CREATE TABLE comment (
     content VARCHAR(255) NOT NULL
 );
 
--- for test default value
-insert into
-    users(username, email, password)
-values
-    (
-        'tareq_hisham',
-        'tareq@gmail.com',
-        'tareq123456789'
-    ),
-    (
-        'naser_wael',
-        'naser@gmail.com',
-        '0123456789'
-    );
-
-insert into
-    post(title, content)
-values
-    ('Sports', 'Cr7 G.O.A.T !!!!!!!!!!!'),
-    ('Social Media', 'Twitter Facebook !!!!!!!!!!');
 
 COMMIT;
