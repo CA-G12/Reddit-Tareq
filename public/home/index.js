@@ -1,7 +1,3 @@
-// import swal from 'sweetalert';
-
-// const { post } = require('../../src/router/post');
-
 const posts = document.querySelector('.posts');
 const errorAddPost = document.querySelector('.error-addPost');
 const addButton = document.querySelector('.addButton');
@@ -10,7 +6,7 @@ const contentTextarea = document.querySelector('#content');
 const loginBtn = document.querySelector('.loginBtn');
 const signupBtn = document.querySelector('.signupBtn');
 const logoutBtn = document.querySelector('.logoutBtn');
-const username = document.querySelector('.username');
+const usernameDiv = document.querySelector('.username');
 
 let inputError = [];
 
@@ -27,8 +23,6 @@ const renderPost = () => {
 renderPost();
 
 const displayPosts = (data) => {
-  const user = data.user_id;
-  console.log(data);
   posts.textContent = '';
   data.forEach((element) => {
     const onePost = document.createElement('div');
@@ -66,37 +60,55 @@ const displayPosts = (data) => {
     suggestion.setAttribute('class', 'suggestion');
     editPost.appendChild(suggestion);
 
-    if (posts.id === username.id) {
-      const btns = document.createElement('div');
-      btns.setAttribute('class', 'btns');
-      suggestion.appendChild(btns);
+    const btns = document.createElement('div');
+    btns.setAttribute('class', 'btns');
+    suggestion.appendChild(btns);
 
-      const deleteBtn = document.createElement('a');
-      btns.appendChild(deleteBtn);
-      deleteBtn.textContent = 'Delete Post';
+    const deleteBtn = document.createElement('a');
+    btns.appendChild(deleteBtn);
+    deleteBtn.textContent = 'Delete Post';
 
-      const deleteIcon = document.createElement('i');
-      deleteIcon.className = 'fa-solid fa-trash';
-      deleteBtn.appendChild(deleteIcon);
+    const deleteIcon = document.createElement('i');
+    deleteIcon.className = 'fa-solid fa-trash';
+    deleteBtn.appendChild(deleteIcon);
 
-      const showBtn = document.createElement('a');
-      btns.appendChild(showBtn);
-      showBtn.textContent = 'Show Post';
+    const showBtn = document.createElement('a');
+    btns.appendChild(showBtn);
+    showBtn.textContent = 'Show Post';
 
-      const showIcon = document.createElement('i');
-      showIcon.className = 'fa-solid fa-hand-pointer';
-      showBtn.appendChild(showIcon);
-      if (posts.user_id === user) {
-        deleteBtn.addEventListener('click', (ele) => {
-          ele.preventDefault();
-          fetch(`/posts/${posts.id}`, {
-            method: 'delete',
-          })
-            .then((res) => res.json())
-            .then(() => window.location.assign('/'));
+    const showIcon = document.createElement('i');
+    showIcon.className = 'fa-solid fa-hand-pointer';
+    showBtn.appendChild(showIcon);
+    // To Delete Your Post
+    deleteBtn.addEventListener('click', () => {
+      fetch(`/posts/${element.id}`, {
+        method: 'DELETE',
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          console.log('result', result);
+          if (result.message === 'Unauthorized') {
+            // eslint-disable-next-line no-alert
+            alert('Please Signup First');
+            window.location.assign('../signup/index.html');
+          } else if (result.message === 'Not Authorized') {
+            window.location.href = '../errors/NotAuthorazied/notAuthoraized.html'; // NotAuthorazied
+          } else {
+            // eslint-disable-next-line no-alert
+            alert('Post Deleted Successfully');
+            window.location.assign('/');
+          }
         });
-      }
-    }
+    });
+    // To Show Your Post in New Page
+
+    showBtn.addEventListener('click', () => {
+      fetch(`posts/showPostPage/${element.id}`)
+        .then((res) => res.json())
+        .then((result) => {
+          window.location.href = `${result.location}?id=${element.id}`;
+        });
+    });
 
     posts.appendChild(onePost);
   });
@@ -131,18 +143,34 @@ addButton.addEventListener('click', (ele) => {
     content: contentTextarea.value,
   };
 
-  fetch('/posts', {
-    method: 'post',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(values),
-  })
+  if (values.title.length === 0 || values.content.length === 0) {
+    // eslint-disable-next-line no-alert
+    alert('You Should Fill the inputs');
+  } else {
+    fetch('/posts', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(values),
+    })
 
-    .then((res) => console.log('res', res))
-    .then(() => {
-      titleInput.value = '';
-      contentTextarea.value = '';
-    });
-  renderPost();
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.message === 'Post Add Successfully') {
+          // eslint-disable-next-line no-alert
+          alert('Post Added Successfully');
+          window.location.assign('/');
+        } else {
+          // eslint-disable-next-line no-alert
+          alert('Please Signup First');
+          window.location.assign('../signup/index.html');
+        }
+      })
+      .then(() => {
+        titleInput.value = '';
+        contentTextarea.value = '';
+      });
+    renderPost();
+  }
 });
 
 // For Get User Name
@@ -153,13 +181,13 @@ fetch('/getUserName', {
   .then((res) => res.json())
   .then((res) => {
     if (res.message === 'User exists') {
-      username.style.display = 'flex';
+      usernameDiv.style.display = 'flex';
       logoutBtn.style.display = 'flex';
       loginBtn.style.display = 'none';
       signupBtn.style.display = 'none';
-      username.textContent = res.username;
+      usernameDiv.textContent = res.username;
     } else {
-      username.style.display = 'none';
+      usernameDiv.style.display = 'none';
       logoutBtn.style.display = 'none';
       loginBtn.style.display = 'flex';
       signupBtn.style.display = 'flex';
@@ -175,7 +203,7 @@ logoutBtn.addEventListener('click', () => {
     .then((res) => res.json)
     .then((res) => {
       if (res.message === 'log out success') {
-        username.style.display = 'none';
+        usernameDiv.style.display = 'none';
         logoutBtn.style.display = 'none';
         loginBtn.style.display = 'flex';
         signupBtn.style.display = 'flex';

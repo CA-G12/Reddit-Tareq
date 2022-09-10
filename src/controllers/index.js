@@ -1,6 +1,6 @@
 // const addThePost = require('./')
 const {
-  addThePost, deleteThePost, getAllThePosts, getThePost,
+  addThePost, deleteThePost, getAllThePosts, getThePost, showPostPage,
 } = require('./postController');
 
 const {
@@ -23,4 +23,5 @@ module.exports = {
   getSignUpPage,
   signup,
   logout,
+  showPostPage,
 };

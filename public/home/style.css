@@ -37,19 +37,27 @@ nav {
     align-items: center;
 }
 .signSection .username {
-    color: rgb(255 67 0);
+    color: #ff4949;
     display: flex;
-    font-family: cursive;
+    font-family: 'Pacifico', cursive;
     font-size: 23px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.username p {
+    font-size: 20px;
+
 }
 
 .signSection a {
     text-decoration: none;
-    color: #bb0000;
-    border: 2px solid rgb(255 83 0);
+    color: #c93333;
+    border: 2px solid #ff4949;
     border-radius: 20px;
-    padding: 10px 20px;
+    padding: 10px 36px;
     margin: 0px 10px;
+    font-weight: 700;
 }
     /* ------------------------------- End About Navbar ------------------------------- */
 
@@ -64,8 +72,9 @@ nav {
     }
     .posts .onePost {
         width: 800px;
-        border: 2px solid #000;
         margin-bottom: 40px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 12px 0px #cacaca;
 
     }
     .username {
@@ -73,24 +82,29 @@ nav {
     }
     .onePost .username {
         padding: 30px 20px 0px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid #9c9c9c;
     }
-
 
     .title {
         margin: 20px 0px;
         font-size: 35px;
         padding: 5px 20px;
-
     }
 
     .title p {
-        text-decoration: underline;
         overflow: hidden;
+        font-family: 'Tangerine', serif;
+        font-size: 55px;
+        font-weight: bold;
+        color: #ff4949;
     }
     .content p {
         font-size: 18px;
         padding: 5px 20px;
         overflow: hidden;
+        padding-bottom: 20px;
+
     }
     .error-addPost {
         color: red;
@@ -99,21 +113,22 @@ nav {
     .btns {
         background: #dadada;
         padding: 20px 15px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
     .btns a {
+        color: #ac8cbc;
         text-decoration: none;
-        color: #010101;
-        border: 2px solid #000000;
         border-radius: 9px;
         padding: 5px 20px;
-        background: #b9b9b9;
+        background: #ffffff;
         margin: 0px 10px;
         cursor: pointer;
-
+        border: navajowhite;
+        font-weight: bold;
     }
     .btns a i {
         padding-left: 12px;
-        
     }
     /* ------------------------------- End About  Posts ------------------------------- */
     
@@ -121,12 +136,15 @@ nav {
     .addPost form {
         display: flex;
         flex-direction: column;
-        border: 2px solid #000;
         background: #fff;
+        border-radius: 10px;
         padding: 10px 15px;
+        box-shadow: 0px 0px 10px 0px #a2a2a2;
     }
     .addPost form label {
         font-size: 20px;
+        margin-top: 10px;
+
     }
     .addPost form input  , .addPost form textarea {
         background-color: rgb(211, 210, 210);
@@ -142,8 +160,9 @@ nav {
         cursor: pointer;
         border-radius: 10px;
         border: none;
-        background: #ff905a;
+        background: #ff6565;
         margin-bottom: 10px;
+        color: #fff;
     }
     /* ------------------------------- End About Add Post ------------------------------- */
     

@@ -43,6 +43,15 @@ nav {
     padding: 10px 20px;
     margin: 0px 10px;
 }
+.signSection .username {
+    color: #ff4949;
+    display: flex;
+    font-family: 'Pacifico', cursive;
+    font-size: 23px;
+    font-weight: 400;
+    text-decoration: underline;
+    padding: 0px;
+}
     /* ------------------------------- End About Navbar ------------------------------- */
 
     /* ------------------------------- Start About Main ------------------------------- */
@@ -56,7 +65,9 @@ nav {
     }
     .posts .onePost {
         width: 800px;
-        border: 2px solid #000;
+        margin-bottom: 40px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 12px 0px #cacaca;
     }
     .username {
         font-weight: 600;
@@ -72,8 +83,13 @@ nav {
     }
 
     .title p {
-        text-decoration: underline;
-    }
+        overflow: hidden;
+        font-family: 'Tangerine', serif;
+        font-size: 50px;
+        font-weight: bold;
+        color: #ff4949;
+        margin-top: 25px;
+       }
     .content p {
         font-size: 18px;
         padding: 5px 20px;
@@ -96,7 +112,21 @@ nav {
     }
     .btns a i {
         padding-left: 12px;
-        
+    }
+
+    .goBack {
+        font-size: 25px;
+        position: relative;
+        top: 100px;
+        right: -43%;
+        padding: 10px 40px;
+        border-radius: 10px;
+        border: none;
+        background: #ff4949;
+        color: #fff;
+        box-shadow: 0px 0px 9px 0px #979797;
+        cursor: pointer;
+        text-decoration: none;
     }
     /* ------------------------------- End About  Posts ------------------------------- */
     /* ------------------------------- End About Main ------------------------------- */

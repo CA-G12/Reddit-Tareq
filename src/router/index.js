@@ -9,10 +9,10 @@ const logout = require('./logout');
 const postRouter = require('./post');
 const { clientError, serverError } = require('../controllers');
 
-router.use('/posts', postRouter);
 router.use(signup);
 router.use(login);
-router.use(postRouter);
+router.use('/posts', postRouter);
+// router.use(postRouter);
 router.use(logout);
 router.use(clientError);
 router.use(serverError);
