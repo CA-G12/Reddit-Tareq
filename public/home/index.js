@@ -86,7 +86,6 @@ const displayPosts = (data) => {
       })
         .then((res) => res.json())
         .then((result) => {
-          console.log('result', result);
           if (result.message === 'Unauthorized') {
             // eslint-disable-next-line no-alert
             alert('Please Signup First');
